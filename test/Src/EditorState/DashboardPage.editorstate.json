@@ -4943,7 +4943,14 @@
           "NameMapSourceSchema": "*[]"
         },
         "BorderStyle",
-        "Font",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Font",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Overflow",
         "PressedColor",
         "HoverColor",
@@ -6607,7 +6614,14 @@
           "NameMapSourceSchema": "*[]"
         },
         "BorderStyle",
-        "Font",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Font",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "FontWeight",
         "Overflow",
         "PressedColor",

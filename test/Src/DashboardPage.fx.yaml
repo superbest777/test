@@ -115,6 +115,7 @@ DashboardPage As screen:
             Color: =RGBA(195,179,5,1)
             FocusedBorderColor: =TextBox1_22.BorderColor
             FocusedBorderThickness: =02
+            Font: =Font.'Dancing Script'
             FontWeight: =FontWeight.Semibold
             Height: =150
             HoverBorderColor: =TextBox1_22.BorderColor
@@ -136,6 +137,7 @@ DashboardPage As screen:
             Color: =RGBA(195,179,5,1)
             FocusedBorderColor: =TextBox2_22.BorderColor
             FocusedBorderThickness: =02
+            Font: =Font.'Dancing Script'
             HoverBorderColor: =TextBox2_22.BorderColor
             HoverColor: =TextBox2_22.Color
             HoverFill: =TextBox2_22.Fill

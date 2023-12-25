@@ -1,0 +1,16 @@
+[
+  {
+    "Data": "[{\"Name\":\"Nigel W\"},{\"Name\":\"Karen A\"},{\"Name\":\"Chris K\"},{\"Name\":\"Josh B\"},{\"Name\":\"Bradley B\"},{\"Name\":\"Ryan C\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Attendants",
+    "OrderedColumnNames": [
+      "Name"
+    ],
+    "OriginalName": "Attendants",
+    "OriginalSchema": "*[Name:s]",
+    "Schema": "*[Name:s]",
+    "Token": "{62451E67-13A6-4A98-BCB1-D4C110B42709}",
+    "Type": "StaticDataSourceInfo"
+  }
+]

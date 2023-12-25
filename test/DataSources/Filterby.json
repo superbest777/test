@@ -1,0 +1,16 @@
+[
+  {
+    "Data": "[{\"Filter By\":\"All\"},{\"Filter By\":\"New\"},{\"Filter By\":\"In progress\"},{\"Filter By\":\"On hold\"},{\"Filter By\":\"Closed\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Filterby",
+    "OrderedColumnNames": [
+      "Filter By"
+    ],
+    "OriginalName": "Filterby",
+    "OriginalSchema": "*['Filter By':s]",
+    "Schema": "*['Filter By':s]",
+    "Token": "{62451E67-13A6-4A98-BCB1-D4C110B42709}",
+    "Type": "StaticDataSourceInfo"
+  }
+]

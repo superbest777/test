@@ -1,0 +1,877 @@
+TicketdetailsPage As screen:
+    Fill: =RGBA(242, 244, 249, .5)
+    Height: =Max(App.Height, App.DesignHeight)
+    OnVisible: =
+    Orientation: =If(TicketdetailsPage.Width < TicketdetailsPage.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= TicketdetailsPage.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Group3 As group:
+        Height: =60
+        Width: =60
+        X: =0
+        Y: =0
+        ZIndex: =1
+
+        Rectangle1_3 As rectangle:
+            AccessibleLabel: ="Navigate to previous screen"
+            BorderColor: =RGBA(0, 0, 255, 1)
+            DisabledFill: =Rectangle1_3.Fill
+            Fill: =RGBA(109,49,162,1)
+            FocusedBorderColor: =Rectangle1_3.BorderColor
+            Height: =60
+            HoverFill: =Rectangle1_3.Fill
+            OnSelect: |-
+                =UpdateContext({textreset:false});UpdateContext({textreset:true});Navigate(DashboardPage, ScreenTransition.Fade)
+            PressedFill: =Rectangle1_3.Fill
+            TabIndex: =0
+            Width: =60
+            ZIndex: =26
+
+        icon4 As icon.ChevronLeft:
+            AccessibleLabel: ="Navigate to previous screen"
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledFill: =icon4.Fill
+            FocusedBorderColor: =icon4.BorderColor
+            Height: =28
+            HoverBorderColor: =ColorFade(icon4.BorderColor, 20%)
+            HoverColor: =ColorFade(icon4.Color, 20%)
+            HoverFill: =icon4.Fill
+            Icon: =Icon.ChevronLeft
+            OnSelect: |-
+                =UpdateContext({textreset:false});UpdateContext({textreset:true});Navigate(DashboardPage, ScreenTransition.Fade)
+            PressedBorderColor: =ColorFade(icon4.BorderColor, -20%)
+            PressedColor: =ColorFade(icon4.Color, -20%)
+            PressedFill: =icon4.Fill
+            TabIndex: =0
+            Width: =28
+            X: =16
+            Y: =16
+            ZIndex: =27
+
+    Rectangle1_14 As rectangle:
+        AccessibleLabel: ="Assign to selection"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Rectangle1_14.Fill
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =Rectangle1_14.BorderColor
+        Height: =52
+        HoverFill: =Rectangle1_14.Fill
+        OnSelect: |-
+            =If(type="Completed","",Navigate(AssigntoPage,ScreenTransition.Fade,{assign:assign}))
+        PressedFill: =Rectangle1_14.Fill
+        TabIndex: =0
+        Width: =717
+        X: =307
+        Y: =511
+        ZIndex: =2
+
+    Rectangle5_7 As rectangle:
+        AccessibleLabel: ="Background rectangle"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Rectangle5_7.Fill
+        Fill: =RGBA(212, 193, 221,.3)
+        FocusedBorderColor: =Rectangle5_7.BorderColor
+        Height: =709.2048192771084
+        HoverFill: =Rectangle5_7.Fill
+        PressedFill: =Rectangle5_7.Fill
+        TabIndex: =0
+        Width: =307
+        Y: =58.79518072289204
+        ZIndex: =4
+
+    Rectangle1_1 As rectangle:
+        AccessibleLabel: ="Header background"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Rectangle1_1.Fill
+        Fill: =RGBA(109,49,162,1)
+        FocusedBorderColor: =Rectangle1_1.BorderColor
+        Height: =60
+        HoverFill: =Rectangle1_1.Fill
+        PressedFill: =Rectangle1_1.Fill
+        TabIndex: =0
+        Width: =1024
+        ZIndex: =5
+
+    TextBox4_1 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =TextBox4_1.BorderColor
+        Height: =60
+        HoverBorderColor: =TextBox4_1.BorderColor
+        HoverColor: =TextBox4_1.Color
+        HoverFill: =TextBox4_1.Fill
+        PressedBorderColor: =TextBox4_1.BorderColor
+        PressedColor: =TextBox4_1.Color
+        PressedFill: =TextBox4_1.Fill
+        Size: =20
+        Text: ="Ticket details"
+        Width: =1024
+        ZIndex: =6
+
+    TextBox5_17 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_17.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        HoverBorderColor: =TextBox5_17.BorderColor
+        HoverColor: =TextBox5_17.Color
+        HoverFill: =TextBox5_17.Fill
+        PressedBorderColor: =TextBox5_17.BorderColor
+        PressedColor: =TextBox5_17.Color
+        PressedFill: =TextBox5_17.Fill
+        Size: =12
+        Text: ="Subject"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =154.85074626865685
+        X: =323.2094480659939
+        Y: =81.61426565399678
+        ZIndex: =7
+
+    Rectangle7_3 As rectangle:
+        AccessibleLabel: ="Separator"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        BorderThickness: =2
+        DisabledFill: =Rectangle7_3.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =Rectangle7_3.BorderColor
+        Height: =1
+        HoverFill: =Rectangle7_3.Fill
+        PressedFill: =Rectangle7_3.Fill
+        TabIndex: =0
+        Width: =717.086956521739
+        X: =306.91304347826093
+        Y: =184.32405553699576
+        ZIndex: =8
+
+    TextBox5_20 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_20.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        HoverBorderColor: =TextBox5_20.BorderColor
+        HoverColor: =TextBox5_20.Color
+        HoverFill: =TextBox5_20.Fill
+        PressedBorderColor: =TextBox5_20.BorderColor
+        PressedColor: =TextBox5_20.Color
+        PressedFill: =TextBox5_20.Fill
+        Size: =12
+        Text: ="Description"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =154.850746268657
+        X: =322.53350455397964
+        Y: =205.70906171245866
+        ZIndex: =9
+
+    Rectangle7_4 As rectangle:
+        AccessibleLabel: ="Separator"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        BorderThickness: =2
+        DisabledFill: =Rectangle7_4.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =Rectangle7_4.BorderColor
+        Height: =1
+        HoverFill: =Rectangle7_4.Fill
+        PressedFill: =Rectangle7_4.Fill
+        TabIndex: =0
+        Width: =717.0869565217381
+        X: =306.91304347826195
+        Y: =331.1630715343864
+        ZIndex: =10
+
+    TextBox5_21 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_21.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        HoverBorderColor: =TextBox5_21.BorderColor
+        HoverColor: =TextBox5_21.Color
+        HoverFill: =TextBox5_21.Fill
+        PressedBorderColor: =TextBox5_21.BorderColor
+        PressedColor: =TextBox5_21.Color
+        PressedFill: =TextBox5_21.Fill
+        Size: =12
+        Text: ="Internal comments"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =197.58608630487743
+        X: =322.48585605217925
+        Y: =351.96995357630857
+        ZIndex: =11
+
+    Rectangle7_5 As rectangle:
+        AccessibleLabel: ="Separator"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        BorderThickness: =2
+        DisabledFill: =Rectangle7_5.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =Rectangle7_5.BorderColor
+        Height: =1
+        HoverFill: =Rectangle7_5.Fill
+        PressedFill: =Rectangle7_5.Fill
+        TabIndex: =0
+        Width: =717.0869565217381
+        X: =306.91304347826195
+        Y: =510.1947000505226
+        ZIndex: =12
+
+    Rectangle7_6 As rectangle:
+        AccessibleLabel: ="Separator"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        BorderThickness: =2
+        DisabledFill: =Rectangle7_6.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =Rectangle7_6.BorderColor
+        Height: =1
+        HoverFill: =Rectangle7_6.Fill
+        PressedFill: =Rectangle7_6.Fill
+        TabIndex: =0
+        Width: =717.0869565217381
+        X: =306.91304347826195
+        Y: =611.8149759824689
+        ZIndex: =13
+
+    Rectangle7_7 As rectangle:
+        AccessibleLabel: ="Separator"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        BorderThickness: =2
+        DisabledFill: =Rectangle7_7.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =Rectangle7_7.BorderColor
+        Height: =1
+        HoverFill: =Rectangle7_7.Fill
+        PressedFill: =Rectangle7_7.Fill
+        TabIndex: =0
+        Width: =717.0869565217381
+        X: =306.913043478262
+        Y: =560.7949055775189
+        ZIndex: =14
+
+    TextBox5_23 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_23.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverBorderColor: =TextBox5_23.BorderColor
+        HoverColor: =TextBox5_23.Color
+        HoverFill: =TextBox5_23.Fill
+        PressedBorderColor: =TextBox5_23.BorderColor
+        PressedColor: =TextBox5_23.Color
+        PressedFill: =TextBox5_23.Fill
+        Size: =12
+        Text: ="Ticket status"
+        Width: =197.586086304877
+        X: =321.57709361144054
+        Y: =459.706736410175
+        ZIndex: =15
+
+    TextBox5_24 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_24.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverBorderColor: =TextBox5_24.BorderColor
+        HoverColor: =TextBox5_24.Color
+        HoverFill: =TextBox5_24.Fill
+        PressedBorderColor: =TextBox5_24.BorderColor
+        PressedColor: =TextBox5_24.Color
+        PressedFill: =TextBox5_24.Fill
+        Size: =12
+        Text: ="Assigned to"
+        Width: =197.586086304877
+        X: =323
+        Y: =511.28063241106883
+        ZIndex: =16
+
+    Button1 As button:
+        AutoDisableOnSelect: =false
+        BorderColor: =ColorFade(Button1.Fill, -15%)
+        BorderThickness: =0
+        DisabledBorderColor: =ColorFade(Button1.BorderColor, 70%)
+        DisplayMode: =If(false,DisplayMode.View,DisplayMode.Edit)
+        Fill: =RGBA(107,0,64,.8)
+        FocusedBorderColor: =Button1.BorderColor
+        Height: =50
+        HoverBorderColor: =Button1.BorderColor
+        HoverColor: =Button1.Color
+        HoverFill: =Button1.Fill
+        OnSelect: |-
+            =If(TextBox5_25.Text<>"Closed", 
+                UpdateIf(TicketsCollect1,ID=EditRecord.ID,{Status:TextBox5_25.Text,AssignedTo:assign,DateClosed:"--",AccountName:TextBox5_59.Text,Priority:TextBox5_60.Text,Subject:TextInput2.Text,Description:TextInput4.Text,Comment:TextInput3.Text}),
+                UpdateIf(TicketsCollect1,ID=EditRecord.ID,{Status:TextBox5_25.Text,AssignedTo:assign,DateClosed:TextBox3.Text,AccountName:TextBox5_59.Text,Priority:TextBox5_60.Text,Subject:TextInput2.Text,Description:TextInput4.Text,Comment:TextInput3.Text}));
+                
+            Navigate(DashboardPage,ScreenTransition.Fade)
+        PressedBorderColor: =Button1.BorderColor
+        PressedColor: =Button1.Color
+        PressedFill: =ColorFade(Button1.Fill, 20%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        Visible: =If(type="Completed",false,true)
+        Width: =717.0976129582267
+        X: =306.90238704177295
+        Y: =718
+        ZIndex: =17
+
+    TextBox5_55 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_55.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverBorderColor: =TextBox5_55.BorderColor
+        HoverColor: =TextBox5_55.Color
+        HoverFill: =TextBox5_55.Fill
+        PaddingLeft: =20
+        PressedBorderColor: =TextBox5_55.BorderColor
+        PressedColor: =TextBox5_55.Color
+        PressedFill: =TextBox5_55.Fill
+        Size: =12
+        Text: ="Created by"
+        Width: =307
+        Y: =277.49011857707483
+        ZIndex: =18
+
+    TextBox5_61 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_61.BorderColor
+        FontWeight: =FontWeight.Lighter
+        Height: =50
+        HoverBorderColor: =TextBox5_61.BorderColor
+        HoverColor: =TextBox5_61.Color
+        HoverFill: =TextBox5_61.Fill
+        PaddingLeft: =20
+        PressedBorderColor: =TextBox5_61.BorderColor
+        PressedColor: =TextBox5_61.Color
+        PressedFill: =TextBox5_61.Fill
+        Size: =12
+        Text: =If(IsBlank(EditRecord.DateClosed),"--",EditRecord.DateClosed)
+        Width: =269
+        Y: =230.79008972418137
+        ZIndex: =19
+
+    TextBox5_54 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_54.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverBorderColor: =TextBox5_54.BorderColor
+        HoverColor: =TextBox5_54.Color
+        HoverFill: =TextBox5_54.Fill
+        PressedBorderColor: =TextBox5_54.BorderColor
+        PressedColor: =TextBox5_54.Color
+        PressedFill: =TextBox5_54.Fill
+        Size: =12
+        Text: ="Priority"
+        Width: =122
+        X: =323
+        Y: =613.280632411069
+        ZIndex: =20
+
+    TextBox5_53 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_53.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverBorderColor: =TextBox5_53.BorderColor
+        HoverColor: =TextBox5_53.Color
+        HoverFill: =TextBox5_53.Fill
+        PressedBorderColor: =TextBox5_53.BorderColor
+        PressedColor: =TextBox5_53.Color
+        PressedFill: =TextBox5_53.Fill
+        Size: =12
+        Text: ="Area"
+        Width: =139.166180758018
+        X: =324
+        Y: =562.280632411069
+        ZIndex: =21
+
+    TextBox5_52 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_52.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =31.721135826617995
+        HoverBorderColor: =TextBox5_52.BorderColor
+        HoverColor: =TextBox5_52.Color
+        HoverFill: =TextBox5_52.Fill
+        PaddingLeft: =20
+        PressedBorderColor: =TextBox5_52.BorderColor
+        PressedColor: =TextBox5_52.Color
+        PressedFill: =TextBox5_52.Fill
+        Size: =12
+        Text: ="Closed date"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =294
+        Y: =219.2788641733824
+        ZIndex: =22
+
+    TextBox5_58 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_58.BorderColor
+        FontWeight: =FontWeight.Lighter
+        Height: =41.39525691699606
+        HoverBorderColor: =TextBox5_58.BorderColor
+        HoverColor: =TextBox5_58.Color
+        HoverFill: =TextBox5_58.Fill
+        PaddingLeft: =20
+        PressedBorderColor: =TextBox5_58.BorderColor
+        PressedColor: =TextBox5_58.Color
+        PressedFill: =TextBox5_58.Fill
+        Size: =14
+        Text: =EditRecord.Owner
+        VerticalAlign: =VerticalAlign.Top
+        Width: =269.1054494292386
+        Y: =309.1438266409554
+        ZIndex: =23
+
+    TextBox5_50 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_50.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        HoverBorderColor: =TextBox5_50.BorderColor
+        HoverColor: =TextBox5_50.Color
+        HoverFill: =TextBox5_50.Fill
+        PaddingLeft: =20
+        PressedBorderColor: =TextBox5_50.BorderColor
+        PressedColor: =TextBox5_50.Color
+        PressedFill: =TextBox5_50.Fill
+        Size: =12
+        Text: ="Ticket ID"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =294
+        Y: =82
+        ZIndex: =24
+
+    TextBox5_56 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_56.BorderColor
+        FontWeight: =FontWeight.Lighter
+        Height: =26
+        HoverBorderColor: =TextBox5_56.BorderColor
+        HoverColor: =TextBox5_56.Color
+        HoverFill: =TextBox5_56.Fill
+        PaddingLeft: =20
+        PressedBorderColor: =TextBox5_56.BorderColor
+        PressedColor: =TextBox5_56.Color
+        PressedFill: =TextBox5_56.Fill
+        Size: =14
+        Text: =EditRecord.ID
+        VerticalAlign: =VerticalAlign.Top
+        Width: =294
+        Y: =102.68830176766933
+        ZIndex: =25
+
+    Rectangle7_8 As rectangle:
+        AccessibleLabel: ="Separator"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        BorderThickness: =2
+        DisabledFill: =Rectangle7_8.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =Rectangle7_8.BorderColor
+        Height: =1
+        HoverFill: =Rectangle7_8.Fill
+        PressedFill: =Rectangle7_8.Fill
+        TabIndex: =0
+        Width: =717.086956521738
+        X: =306.913043478262
+        Y: =663.2529644268769
+        ZIndex: =28
+
+    TextInput2 As text:
+        AccessibleLabel: ="Ticket subject"
+        BorderColor: =RGBA(204,204,204,1)
+        Default: =EditRecord.Subject
+        DisabledBorderColor: =RGBA(204,204,204,1)
+        DisabledColor: =TextInput2.Color
+        DisabledFill: =TextInput2.Fill
+        DisplayMode: =If(subjectdisabled,DisplayMode.Disabled,false,DisplayMode.View,DisplayMode.Edit)
+        Fill: =subjectfill
+        FocusedBorderColor: =TextInput2.BorderColor
+        FocusedBorderThickness: =3
+        Height: =45.465944007156
+        HoverBorderColor: =RGBA(230,230,230,1)
+        HoverFill: =TextInput2.Fill
+        Mode: =TextMode.MultiLine
+        PaddingBottom: =8
+        PaddingLeft: =8
+        PaddingRight: =8
+        PaddingTop: =8
+        PressedBorderColor: =TextInput2.HoverBorderColor
+        PressedColor: =TextInput2.Color
+        PressedFill: =TextInput2.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =textreset
+        Size: =11
+        Width: =676.0915750915769
+        X: =327.9084249084233
+        Y: =112.53405599284414
+        ZIndex: =29
+
+    TextInput3 As text:
+        AccessibleLabel: ="Ticket internal comments"
+        BorderColor: =RGBA(204,204,204,1)
+        Default: |
+            =
+            EditRecord.Comment
+        DisabledBorderColor: =RGBA(204,204,204,1)
+        DisabledColor: =TextInput3.Color
+        DisabledFill: =TextInput3.Fill
+        DisplayMode: =If(commentdisabled,DisplayMode.Disabled,false,DisplayMode.View,DisplayMode.Edit)
+        Fill: =commentfill
+        FocusedBorderColor: =TextInput3.BorderColor
+        FocusedBorderThickness: =3
+        Height: =45
+        HoverBorderColor: =RGBA(230,230,230,1)
+        HoverFill: =TextInput3.Fill
+        Mode: =TextMode.MultiLine
+        OnSelect: |-
+            =UpdateContext({disableinput:false})
+        PaddingBottom: =8
+        PaddingLeft: =8
+        PaddingRight: =8
+        PaddingTop: =8
+        PressedBorderColor: =TextInput3.HoverBorderColor
+        PressedColor: =TextInput3.Color
+        PressedFill: =TextInput3.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =textreset
+        Size: =11
+        Width: =675.778393351801
+        X: =328.221606648199
+        Y: =382.3069359543475
+        ZIndex: =30
+
+    TextInput4 As text:
+        AccessibleLabel: ="Ticket description"
+        BorderColor: =RGBA(204,204,204,1)
+        Default: =EditRecord.Description
+        DisabledBorderColor: =RGBA(204,204,204,1)
+        DisabledColor: =TextInput4.Color
+        DisabledFill: =TextInput4.Fill
+        DisplayMode: =If(description_disabled,DisplayMode.Disabled,false,DisplayMode.View,DisplayMode.Edit)
+        Fill: =description_fill
+        FocusedBorderColor: =TextInput4.BorderColor
+        FocusedBorderThickness: =3
+        Height: =63
+        HoverBorderColor: =RGBA(230,230,230,1)
+        HoverFill: =TextInput4.Fill
+        Mode: =TextMode.MultiLine
+        OnSelect: |-
+            =UpdateContext({disableinput:false});UpdateContext({disableinput:true})
+        PaddingBottom: =8
+        PaddingLeft: =8
+        PaddingRight: =8
+        PaddingTop: =8
+        PressedBorderColor: =TextInput4.HoverBorderColor
+        PressedColor: =TextInput4.Color
+        PressedFill: =TextInput4.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =textreset
+        Size: =11
+        Width: =675.783933518006
+        X: =328.2160664819944
+        Y: =236.73681684599043
+        ZIndex: =31
+
+    Rectangle7_14 As rectangle:
+        AccessibleLabel: ="Separator"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        BorderThickness: =2
+        DisabledFill: =Rectangle7_14.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =Rectangle7_14.BorderColor
+        Height: =1
+        HoverFill: =Rectangle7_14.Fill
+        PressedFill: =Rectangle7_14.Fill
+        TabIndex: =0
+        Width: =717.086956521738
+        X: =306.91304347826195
+        Y: =458.635758068162
+        ZIndex: =35
+
+    Group18 As group:
+        Height: =51.5555555555552
+        Width: =530.604743083004
+        X: =493.395256916996
+        Y: =460.079870738534
+        ZIndex: =36
+
+        TextBox5_25 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(29,33,35,.9)
+            FocusedBorderColor: =TextBox5_25.BorderColor
+            FocusedBorderThickness: =02
+            Height: =51.5555555555552
+            HoverBorderColor: =TextBox5_25.BorderColor
+            HoverColor: =TextBox5_25.Color
+            HoverFill: =TextBox5_25.Fill
+            OnSelect: |-
+                =Navigate(CasestatusPage,ScreenTransition.Fade,{type:type})
+            PressedBorderColor: =TextBox5_25.BorderColor
+            PressedColor: =TextBox5_25.Color
+            PressedFill: =TextBox5_25.Fill
+            Size: =12
+            Text: =type
+            Width: =530.604743083004
+            X: =493.39525691699606
+            Y: =460.07987073853394
+            ZIndex: =37
+
+        icon2_4 As icon.ChevronRight:
+            AccessibleLabel: ="Navigate to ticket status"
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(109,49,162,1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledFill: =icon2_4.Fill
+            FocusedBorderColor: =icon2_4.BorderColor
+            Height: =20
+            HoverBorderColor: =ColorFade(icon2_4.BorderColor, 20%)
+            HoverColor: =ColorFade(icon2_4.Color, 20%)
+            HoverFill: =icon2_4.Fill
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Navigate(CasestatusPage,ScreenTransition.Fade,{type:type})
+            PressedBorderColor: =ColorFade(icon2_4.BorderColor, -20%)
+            PressedColor: =ColorFade(icon2_4.Color, -20%)
+            PressedFill: =icon2_4.Fill
+            TabIndex: =0
+            Width: =20
+            X: =988.9175554489426
+            Y: =474.85764851631194
+            ZIndex: =38
+
+    Group19 As group:
+        Height: =49.27700831024924
+        Width: =530.071146245059
+        X: =493.928853754941
+        Y: =512.00362410082
+        ZIndex: =39
+
+        TextBox5_26 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(29,33,35,.9)
+            FocusedBorderColor: =TextBox5_26.BorderColor
+            FocusedBorderThickness: =02
+            Height: =49.2770083102493
+            HoverBorderColor: =TextBox5_26.BorderColor
+            HoverColor: =TextBox5_26.Color
+            HoverFill: =TextBox5_26.Fill
+            OnSelect: |-
+                =Navigate(AssigntoPage,ScreenTransition.Fade,{assign:assign})
+            PressedBorderColor: =TextBox5_26.BorderColor
+            PressedColor: =TextBox5_26.Color
+            PressedFill: =TextBox5_26.Fill
+            Size: =12
+            Text: =If(IsBlank(assign),"None",assign)
+            Width: =530.0711462450588
+            X: =493.92885375494114
+            Y: =512.0036241008199
+            ZIndex: =40
+
+        icon2_5 As icon.ChevronRight:
+            AccessibleLabel: ="Navigate to ticket assignment"
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(109,49,162,1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledFill: =icon2_5.Fill
+            FocusedBorderColor: =icon2_5.BorderColor
+            Height: =20
+            HoverBorderColor: =ColorFade(icon2_5.BorderColor, 20%)
+            HoverColor: =ColorFade(icon2_5.Color, 20%)
+            HoverFill: =icon2_5.Fill
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Navigate(AssigntoPage,ScreenTransition.Fade,{assign:assign})
+            PressedBorderColor: =ColorFade(icon2_5.BorderColor, -20%)
+            PressedColor: =ColorFade(icon2_5.Color, -20%)
+            PressedFill: =icon2_5.Fill
+            TabIndex: =0
+            Width: =20
+            X: =988.6802284458656
+            Y: =526.642128255945
+            ZIndex: =41
+
+    Group20 As group:
+        Height: =50
+        Width: =530.617674327819
+        X: =493.382325672181
+        Y: =562.280632411069
+        ZIndex: =42
+
+        TextBox5_59 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(29,33,35,.9)
+            FocusedBorderColor: =TextBox5_59.BorderColor
+            FocusedBorderThickness: =02
+            Height: =50
+            HoverBorderColor: =TextBox5_59.BorderColor
+            HoverColor: =TextBox5_59.Color
+            HoverFill: =TextBox5_59.Fill
+            OnSelect: |-
+                =Navigate(AreaPage,ScreenTransition.Fade,{Area:Area}) 
+            PressedBorderColor: =TextBox5_59.BorderColor
+            PressedColor: =TextBox5_59.Color
+            PressedFill: =TextBox5_59.Fill
+            Size: =12
+            Text: =Area
+            Width: =530.6176743278195
+            X: =493.38232567218097
+            Y: =562.280632411069
+            ZIndex: =43
+
+        icon2_6 As icon.ChevronRight:
+            AccessibleLabel: ="Navigate to ticket area"
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(109,49,162,1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledFill: =icon2_6.Fill
+            FocusedBorderColor: =icon2_6.BorderColor
+            Height: =20
+            HoverBorderColor: =ColorFade(icon2_6.BorderColor, 20%)
+            HoverColor: =ColorFade(icon2_6.Color, 20%)
+            HoverFill: =icon2_6.Fill
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Navigate(AreaPage,ScreenTransition.Fade,{Area:Area}) 
+            PressedBorderColor: =ColorFade(icon2_6.BorderColor, -20%)
+            PressedColor: =ColorFade(icon2_6.Color, -20%)
+            PressedFill: =icon2_6.Fill
+            TabIndex: =0
+            Width: =20
+            X: =988.8738236705166
+            Y: =577.280632411069
+            ZIndex: =44
+
+    Group21 As group:
+        Height: =50
+        Width: =530.414674057087
+        X: =493.585325942913
+        Y: =613.508414614879
+        ZIndex: =45
+
+        TextBox5_60 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(29,33,35,.9)
+            FocusedBorderColor: =TextBox5_60.BorderColor
+            FocusedBorderThickness: =02
+            Height: =50.00000000000004
+            HoverBorderColor: =TextBox5_60.BorderColor
+            HoverColor: =TextBox5_60.Color
+            HoverFill: =TextBox5_60.Fill
+            OnSelect: |-
+                =Navigate(PriorityPage,ScreenTransition.Fade,{priority:priority})
+            PressedBorderColor: =TextBox5_60.BorderColor
+            PressedColor: =TextBox5_60.Color
+            PressedFill: =TextBox5_60.Fill
+            Size: =12
+            Text: =priority
+            Width: =530.414674057087
+            X: =493.58532594291296
+            Y: =613.5084146148789
+            ZIndex: =46
+
+        icon2_7 As icon.ChevronRight:
+            AccessibleLabel: ="Navigate to ticket priority"
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(109,49,162,1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledFill: =icon2_7.Fill
+            FocusedBorderColor: =icon2_7.BorderColor
+            Height: =20
+            HoverBorderColor: =ColorFade(icon2_7.BorderColor, 20%)
+            HoverColor: =ColorFade(icon2_7.Color, 20%)
+            HoverFill: =icon2_7.Fill
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Navigate(PriorityPage,ScreenTransition.Fade,{priority:priority})
+            PressedBorderColor: =ColorFade(icon2_7.BorderColor, -20%)
+            PressedColor: =ColorFade(icon2_7.Color, -20%)
+            PressedFill: =icon2_7.Fill
+            TabIndex: =0
+            Width: =20
+            X: =988.7807866799251
+            Y: =628.5084146148789
+            ZIndex: =47
+
+    TextBox3 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        FocusedBorderColor: =TextBox3.BorderColor
+        HoverBorderColor: =TextBox3.BorderColor
+        HoverColor: =TextBox3.Color
+        HoverFill: =TextBox3.Fill
+        PressedBorderColor: =TextBox3.BorderColor
+        PressedColor: =TextBox3.Color
+        PressedFill: =TextBox3.Fill
+        Text: =Today()
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =false
+        X: =40
+        Y: =40
+        ZIndex: =48
+
+    TextBox5_51 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_51.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        HoverBorderColor: =TextBox5_51.BorderColor
+        HoverColor: =TextBox5_51.Color
+        HoverFill: =TextBox5_51.Fill
+        PaddingLeft: =20
+        PressedBorderColor: =TextBox5_51.BorderColor
+        PressedColor: =TextBox5_51.Color
+        PressedFill: =TextBox5_51.Fill
+        Size: =12
+        Text: ="Created date"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =294
+        Y: =149.69657338015583
+        ZIndex: =51
+
+    TextBox5_57 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(29,33,35,.9)
+        FocusedBorderColor: =TextBox5_57.BorderColor
+        FontWeight: =FontWeight.Lighter
+        Height: =44.39599870207499
+        HoverBorderColor: =TextBox5_57.BorderColor
+        HoverColor: =TextBox5_57.Color
+        HoverFill: =TextBox5_57.Fill
+        PaddingLeft: =20
+        PressedBorderColor: =TextBox5_57.BorderColor
+        PressedColor: =TextBox5_57.Color
+        PressedFill: =TextBox5_57.Fill
+        Size: =14
+        Text: =EditRecord.DateCreated
+        VerticalAlign: =VerticalAlign.Top
+        Width: =202.3989817675471
+        Y: =171.0975581417015
+        ZIndex: =52
+

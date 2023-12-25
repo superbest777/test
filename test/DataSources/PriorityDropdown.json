@@ -1,0 +1,16 @@
+[
+  {
+    "Data": "[{\"Priority\":\"Select a priority\"},{\"Priority\":\"Low\"},{\"Priority\":\"Medium\"},{\"Priority\":\"High\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "PriorityDropdown",
+    "OrderedColumnNames": [
+      "Priority"
+    ],
+    "OriginalName": "PriorityDropdown",
+    "OriginalSchema": "*[Priority:s]",
+    "Schema": "*[Priority:s]",
+    "Token": "{62451E67-13A6-4A98-BCB1-D4C110B42709}",
+    "Type": "StaticDataSourceInfo"
+  }
+]

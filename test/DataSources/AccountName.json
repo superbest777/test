@@ -1,0 +1,16 @@
+[
+  {
+    "Data": "[{\"Account Name\":\"Select an area\"},{\"Account Name\":\"IT\"},{\"Account Name\":\"Facilities\"},{\"Account Name\":\"HR\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "AccountName",
+    "OrderedColumnNames": [
+      "Account Name"
+    ],
+    "OriginalName": "AccountName",
+    "OriginalSchema": "*['Account Name':s]",
+    "Schema": "*['Account Name':s]",
+    "Token": "{62451E67-13A6-4A98-BCB1-D4C110B42709}",
+    "Type": "StaticDataSourceInfo"
+  }
+]

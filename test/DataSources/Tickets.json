@@ -1,0 +1,26 @@
+[
+  {
+    "Data": "[{\"AccountName\":\"IT\",\"AssignedTo\":\"None\",\"Comment\":null,\"DateClosed\":null,\"DateCreated\":\"04/18/2016\",\"Description\":\"The wireless network seems to be down in Building 1. Can\\u0027t access web, intranet, or email. \",\"ID\":\"1\",\"Owner\":\"Steven Smith\",\"Priority\":\"High\",\"Status\":\"In progress\",\"Subject\":\"Wi-fi isn\\u0027t working\"},{\"AccountName\":\"IT\",\"AssignedTo\":\"Nigel W\",\"Comment\":null,\"DateClosed\":null,\"DateCreated\":\"04/18/2016\",\"Description\":\"Something is wrong with my email. It froze in the middle of sending a PPT \",\"ID\":\"2\",\"Owner\":\"Katherine Jonas\",\"Priority\":\"Normal\",\"Status\":\"In progress\",\"Subject\":\"Not able to send email\"},{\"AccountName\":\"IT\",\"AssignedTo\":\"Josh B\",\"Comment\":null,\"DateClosed\":null,\"DateCreated\":\"03/28/2016\",\"Description\":\"How to I fix the expired certificate message that keeps popping up?\",\"ID\":\"3\",\"Owner\":\"Michael Brown\",\"Priority\":\"High\",\"Status\":\"On hold\",\"Subject\":\"Certificate has expired\"},{\"AccountName\":\"IT\",\"AssignedTo\":\"Karen A\",\"Comment\":\"Tried to update drivers and am looking into larger network issues. \",\"DateClosed\":null,\"DateCreated\":\"03/17/2016\",\"Description\":\"The network is not recognizing the large format printer \",\"ID\":\"4\",\"Owner\":\"Murray Burrows\",\"Priority\":\"Normal\",\"Status\":\"In progress\",\"Subject\":\"Printer is offline\"},{\"AccountName\":\"IT\",\"AssignedTo\":\"Nigel W\",\"Comment\":null,\"DateClosed\":null,\"DateCreated\":\"02/28/2016\",\"Description\":\"We\\u0027re getting nothing down here. Did the construction guys knock it out? \",\"ID\":\"5\",\"Owner\":\"Lily Jones\",\"Priority\":\"Normal\",\"Status\":\"In progress\",\"Subject\":\"Network outage on first floor\"},{\"AccountName\":\"IT\",\"AssignedTo\":\"Nigel W\",\"Comment\":\"Traced to hardware failure. Looking into related issues.\",\"DateClosed\":null,\"DateCreated\":\"04/18/2016\",\"Description\":\"Email and internet are down for everyone in my area on the 1st floor\",\"ID\":\"6\",\"Owner\":\"John Gill\",\"Priority\":\"Normal\",\"Status\":\"On hold\",\"Subject\":\"Can\\u0027t connect to web or email\"},{\"AccountName\":\"IT\",\"AssignedTo\":\"Chris K\",\"Comment\":\"UPS tracking says it will be arriving today before 3pm.\",\"DateClosed\":\"04/14/2016\",\"DateCreated\":\"03/12/2016\",\"Description\":\"The new project mgr is still missing a monitor and a docking station\",\"ID\":\"7\",\"Owner\":\"Naomi Cobb\",\"Priority\":\"Low\",\"Status\":\"Closed\",\"Subject\":\"Need monitor for new hire\"},{\"AccountName\":\"Facilities\",\"AssignedTo\":\"Chris K\",\"Comment\":null,\"DateClosed\":null,\"DateCreated\":\"03/01/2016\",\"Description\":\"The LED replacement bulbs have been ordered and will arrive next week\",\"ID\":\"8\",\"Owner\":\"Hollie King\",\"Priority\":\"High\",\"Status\":\"On hold\",\"Subject\":\"New lights for break room\"},{\"AccountName\":\"Facilities\",\"AssignedTo\":\"None\",\"Comment\":null,\"DateClosed\":null,\"DateCreated\":\"03/21/2016\",\"Description\":\"We\\u0027d like to swap out all six desks for standing desks and will need new chairs, too.1\",\"ID\":\"9\",\"Owner\":\"Celeste Ray\",\"Priority\":\"Low\",\"Status\":\"In progress\",\"Subject\":\"Stand up desks in marketing\"},{\"AccountName\":\"Facilities\",\"AssignedTo\":\"None\",\"Comment\":null,\"DateClosed\":null,\"DateCreated\":\"04/01/2016\",\"Description\":\"The telephones placed at the desk is not functioning to make calls.\",\"ID\":\"10\",\"Owner\":\"June Jonathan\",\"Priority\":\"Normal\",\"Status\":\"New\",\"Subject\":\"Desk phone isn\\u0027t working\"},{\"AccountName\":\"Facilities\",\"AssignedTo\":\"None\",\"Comment\":null,\"DateClosed\":\"04/12/2016\",\"DateCreated\":\"04/08/2016\",\"Description\":\"How do I get a projector set up in the main lobby? \",\"ID\":\"11\",\"Owner\":\"Ginger Maynard\",\"Priority\":\"Normal\",\"Status\":\"Closed\",\"Subject\":\"Need a projector \\u0026 speakers\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Tickets",
+    "OrderedColumnNames": [
+      "ID",
+      "Owner",
+      "Status",
+      "AccountName",
+      "DateCreated",
+      "DateClosed",
+      "Subject",
+      "Description",
+      "Priority",
+      "AssignedTo",
+      "Comment"
+    ],
+    "OriginalName": "Tickets",
+    "OriginalSchema": "*[AccountName:s, AssignedTo:s, Comment:s, DateClosed:s, DateCreated:s, Description:s, ID:s, Owner:s, Priority:s, Status:s, Subject:s]",
+    "Schema": "*[AccountName:s, AssignedTo:s, Comment:s, DateClosed:s, DateCreated:s, Description:s, ID:s, Owner:s, Priority:s, Status:s, Subject:s]",
+    "Token": "{62451E67-13A6-4A98-BCB1-D4C110B42709}",
+    "Type": "StaticDataSourceInfo"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "Data": "[{\"TicketTypes\":\"All tickets\"},{\"TicketTypes\":\"New tickets\"},{\"TicketTypes\":\"Tickets in progress\"},{\"TicketTypes\":\"Tickets on hold\"},{\"TicketTypes\":\"Tickets closed\"},{\"TicketTypes\":\"Tickets older than 3 days\"},{\"TicketTypes\":\"Tickets opened today\"},{\"TicketTypes\":\"Tickets closed today\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "TicketTypes",
+    "OrderedColumnNames": [
+      "TicketTypes"
+    ],
+    "OriginalName": "TicketTypes",
+    "OriginalSchema": "*[TicketTypes:s]",
+    "Schema": "*[TicketTypes:s]",
+    "Token": "{62451E67-13A6-4A98-BCB1-D4C110B42709}",
+    "Type": "StaticDataSourceInfo"
+  }
+]

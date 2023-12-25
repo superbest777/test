@@ -1,0 +1,175 @@
+AreaPage As screen:
+    Height: =Max(App.Height, App.DesignHeight)
+    Orientation: =If(AreaPage.Width < AreaPage.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= AreaPage.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle1_11 As rectangle:
+        AccessibleLabel: ="Header background"
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Rectangle1_11.Fill
+        Fill: =RGBA(109,49,162,1)
+        FocusedBorderColor: =Rectangle1_11.BorderColor
+        Height: =60
+        HoverFill: =Rectangle1_11.Fill
+        PressedFill: =Rectangle1_11.Fill
+        TabIndex: =0
+        Width: =1024
+        ZIndex: =2
+
+    TextBox4_6 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =TextBox4_6.BorderColor
+        Height: =60
+        HoverBorderColor: =TextBox4_6.BorderColor
+        HoverColor: =TextBox4_6.Color
+        HoverFill: =TextBox4_6.Fill
+        PressedBorderColor: =TextBox4_6.BorderColor
+        PressedColor: =TextBox4_6.Color
+        PressedFill: =TextBox4_6.Fill
+        Size: =20
+        Text: ="Area"
+        Width: =1024
+        ZIndex: =3
+
+    AreaGallery As gallery.galleryVertical:
+        AccessibleLabel: ="Area selections gallery"
+        DisabledBorderColor: =AreaGallery.BorderColor
+        DisabledFill: =AreaGallery.Fill
+        Fill: =RGBA(242, 244, 249, .5)
+        Height: =708
+        HoverBorderColor: =AreaGallery.BorderColor
+        HoverFill: =AreaGallery.Fill
+        Items: =AccountNameTypes
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =AreaGallery.BorderColor
+        PressedBorderColor: =AreaGallery.BorderColor
+        PressedFill: =AreaGallery.Fill
+        TemplatePadding: =0
+        TemplateSize: =45.78236914600549
+        Width: =1024
+        Y: =60
+        ZIndex: =4
+
+        Rectangle7_12 As rectangle:
+            AccessibleLabel: ="Separator"
+            BorderColor: =RGBA(0, 0, 255, 1)
+            DisabledFill: =Rectangle7_12.Fill
+            Fill: =RGBA(204, 204, 204, 1)
+            FocusedBorderColor: =Rectangle7_12.BorderColor
+            Height: =1
+            HoverFill: =Rectangle7_12.Fill
+            PressedFill: =Rectangle7_12.Fill
+            Width: =1024
+            Y: =44.7823691460055
+            ZIndex: =1
+
+        icon1_2 As icon.Check:
+            AccessibleLabel: ="Selected icon"
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(115,115,115,1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledFill: =icon1_2.Fill
+            FocusedBorderColor: =icon1_2.BorderColor
+            Height: =26
+            HoverBorderColor: =ColorFade(icon1_2.BorderColor, 20%)
+            HoverColor: =ColorFade(icon1_2.Color, 20%)
+            HoverFill: =icon1_2.Fill
+            Icon: =Icon.Check
+            PressedBorderColor: =ColorFade(icon1_2.BorderColor, -20%)
+            PressedColor: =ColorFade(icon1_2.Color, -20%)
+            PressedFill: =icon1_2.Fill
+            Visible: =If(ThisItem.AccountNameTypes='MeasureInMR.MeasurementType'.Area,true,false)
+            Width: =26
+            X: =975.7974683544235
+            Y: =9.89118457300275
+            ZIndex: =2
+
+        Group16_1 As group:
+            Height: =45.7823691460055
+            Width: =1024
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+            Rectangle7_1 As rectangle:
+                AccessibleLabel: =ThisItem.AccountNameTypes
+                BorderColor: =RGBA(0, 0, 255, 1)
+                DisabledFill: =Rectangle7_1.Fill
+                Fill: =RGBA(62,96,170,0)
+                FocusedBorderColor: =Rectangle7_1.BorderColor
+                Height: =45.7823691460055
+                HoverFill: =Rectangle7_1.Fill
+                OnSelect: |-
+                    =Navigate(TicketdetailsPage,ScreenTransition.Fade,{Area:AreaGallery.Selected.AccountNameTypes})
+                PressedFill: =Rectangle7_1.Fill
+                TabIndex: =0
+                Width: =1024
+                ZIndex: =4
+
+            TextBox8_2 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(29,33,35,.9)
+                FocusedBorderColor: =TextBox8_2.BorderColor
+                FocusedBorderThickness: =02
+                FontWeight: =FontWeight.Semibold
+                Height: =45.7823691460055
+                HoverBorderColor: =TextBox8_2.BorderColor
+                HoverColor: =TextBox8_2.Color
+                HoverFill: =TextBox8_2.Fill
+                OnSelect: |-
+                    =Navigate(TicketdetailsPage,ScreenTransition.Fade,{Area:AreaGallery.Selected.AccountNameTypes})
+                PressedBorderColor: =TextBox8_2.BorderColor
+                PressedColor: =TextBox8_2.Color
+                PressedFill: =TextBox8_2.Fill
+                Size: =12
+                Text: =ThisItem.AccountNameTypes
+                Width: =759.8736696740102
+                X: =13.341252366788573
+                ZIndex: =5
+
+    Group6_1 As group:
+        Height: =60
+        Width: =60
+        X: =0
+        Y: =0
+        ZIndex: =20
+
+        Rectangle1_13 As rectangle:
+            AccessibleLabel: ="Navigate to previous screen"
+            BorderColor: =RGBA(0, 0, 255, 1)
+            DisabledFill: =Rectangle1_13.Fill
+            Fill: =RGBA(109,49,162,1)
+            FocusedBorderColor: =Rectangle1_13.BorderColor
+            Height: =60
+            HoverFill: =Rectangle1_13.Fill
+            OnSelect: =Back()
+            PressedFill: =Rectangle1_13.Fill
+            TabIndex: =0
+            Width: =60
+            ZIndex: =21
+
+        icon5_2 As icon.Cancel:
+            AccessibleLabel: ="Navigate to previous screen"
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledFill: =icon5_2.Fill
+            FocusedBorderColor: =icon5_2.BorderColor
+            Height: =30
+            HoverBorderColor: =ColorFade(icon5_2.BorderColor, 20%)
+            HoverColor: =ColorFade(icon5_2.Color, 20%)
+            HoverFill: =icon5_2.Fill
+            Icon: =Icon.Cancel
+            OnSelect: =Back()
+            PressedBorderColor: =ColorFade(icon5_2.BorderColor, -20%)
+            PressedColor: =ColorFade(icon5_2.Color, -20%)
+            PressedFill: =icon5_2.Fill
+            TabIndex: =0
+            Width: =30
+            X: =15
+            Y: =15
+            ZIndex: =22
+
